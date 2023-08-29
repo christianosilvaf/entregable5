@@ -1,6 +1,6 @@
 import React from 'react'
 
-const HeaderPokeball = () => {
+const HeaderPokeball = ({children}) => {
     return (
     <section className='h-[100px] relative'>
         <div className='bg-red-600 h-1/2 border-t-[5px] border-b-[3px] border-black'></div>
@@ -19,6 +19,7 @@ const HeaderPokeball = () => {
             <img src="/LogoIntro.png" height="100" alt="" />
         </div>
 
+        {children}
     </section>
     )
 }
