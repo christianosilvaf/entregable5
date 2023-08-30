@@ -1,9 +1,9 @@
-import React from 'react'
 import FooterPokeball from '../components/Layout/FooterPokeball'
 import { loginTrainer } from '../store/slices/trainer.slice'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { choosingtype } from '../store/slices/pokedextype.slice'
+
 
 const Home = () => {
 
@@ -147,7 +147,9 @@ const Home = () => {
         </div>
 
         </div>
-        <FooterPokeball />    
+        <FooterPokeball />   
+
+        
 
     </main>
     )

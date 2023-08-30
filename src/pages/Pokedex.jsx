@@ -17,9 +17,9 @@ const Pokedex = () => {
     <main>
 
       <section className='w-[75%] h-[100%] flex flex-col gap-4 my-4 items-center justify-center mx-auto'>
-        <p> <span className='text-[35px]'>Wellcome {name} </span>
+        <p className='text-[25px] text-center mx-auto text-white flex flex-col'> Wellcome <span className='text-[30px]  whitespace-pre-wrap uppercase'> {name} </span>
         </p>
-        <form className='flex flex-row gap-8 items-center justify-between' action="">
+        <form className='flex flex-col min-[400px]:flex-row gap-8 items-center justify-between' action="">
           <div > 
             <input className='w-[300px] rounded-2xl border-[4px] border-black p-3' onChange={handleChange(setPokemonName)} value={pokemonName} placeholder="Type pokemon name to search..." type="text" />
           </div>
@@ -33,7 +33,7 @@ const Pokedex = () => {
         </form>
       </section>
 
-      <Pagination lastPage={lastPage} pagesInCurrentBlock={pagesInCurrentBlock} setCurrentPage={setCurrentPage}/>
+      <Pagination lastPage={lastPage} pagesInCurrentBlock={pagesInCurrentBlock} setCurrentPage={setCurrentPage} currentPage={currentPage}/>
 
       <PokemonList pokemons={itemsInCurrentPage} />
 
