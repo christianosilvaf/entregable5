@@ -3,7 +3,7 @@ import './App.css'
 
 import PokemonDetail from './pages/PokemonDetail'
 import Page404 from './pages/Page404'
-import Home from './pages/home'
+import Home from './pages/Home.jsx'
 import Pokedex from './pages/Pokedex'
 import PrivateRoutes from './components/auth/PrivateRoutes'
 
