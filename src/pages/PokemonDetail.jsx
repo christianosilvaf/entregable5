@@ -48,12 +48,12 @@ const PokemonDetail = () => {
 
 	return (
     <main>
-        <div className='bg-red-500 min-[600px]:h-[600px] h-[900px] max-w-[700px] mt-3 mb-0 mx-auto border-[3px] border-black rounded-lg p-2'>
+        <div className='bg-red-500 min-[600px]:h-[600px] h-[900px] max-w-[700px] mt-3 mb-0 mx-auto border-[3px] border-black rounded-lg p-2 items-center'>
 			<div className='flex justify-between p-2'>
-				<div className='bg-cyan-500 aspect-square border-[5px] border-black h-[60px] rounded-full'>
+				<div className='bg-cyan-500 aspect-square animate-pulse border-[5px] border-black h-[60px] rounded-full'>
 				</div>
 
-			    <button className='w-[50px] aspect-square bg-yellow-400 animate-pulse text-center rounded-lg text-black border-[5px]
+			    <button className='w-[50px] aspect-square bg-yellow-400 animate-bounce text-center rounded-lg text-black border-[5px]
 				                border-sky-950 hover:bg-white hover:text-red-500 text-[20px] font-extrabold'
 				        onClick={()=> handleGoPokedexList()}>X</button>
 			</div>
@@ -85,7 +85,7 @@ const PokemonDetail = () => {
 			</div>
         </div>
 
-		<div className={`bg-red-500 w-1/1  flex flex-col items-center border-[4px] border-black rounded-md mt-0 pb-4 ${fun(visibilityMov)}`}>
+		<div className={`bg-red-500 max-w-[700px] flex flex-col justify-center items-center mx-auto border-[4px] border-black rounded-md mt-0 pb-4 ${fun(visibilityMov)}`}>
 			<div className='bg-[#44f814] w-[80%] h-[80%] border-b-[10px] border-r-[10px] 
 							border-l-[10px] border-sky-950 rounded-3xl
 							flex flex-wrap gap-2 p-3'>
@@ -97,7 +97,7 @@ const PokemonDetail = () => {
 			</div>
 		</div>
 
-		<div className={`bg-red-500 w-1/1  flex flex-col items-center border-[4px] border-black rounded-md mt-0 pb-4 ${fun2(visibilityAbi)}`}>
+		<div className={`bg-red-500 max-w-[700px]  flex flex-col items-center border-[4px] mx-auto border-black rounded-md mt-0 pb-4 ${fun2(visibilityAbi)}`}>
 			<div className='bg-[#44f814] w-[80%] h-[80%] border-b-[10px] border-r-[10px] 
 							border-l-[10px] border-sky-950 rounded-3xl
 							flex flex-wrap gap-2 p-3'>
