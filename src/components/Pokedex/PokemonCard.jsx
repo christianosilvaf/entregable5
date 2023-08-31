@@ -11,26 +11,26 @@ const PokemonCards = ({pokemonURL}) => {
     }
 
     const bgStylePokemon ={
-    normal: 'bg-gradient-to-b from-[#CB98A7] via-[#CB98A7]/20 to-[#CB98A7]',
-    fighting: 'bg-gradient-to-b from-[#EF6139] via-[#EF6139]/20 to-[#EF6139]',
-    flying: 'bg-gradient-to-b from-[#93B2C7] via-[#93B2C7]/20 to-[#93B2C7]',
-    poison: 'bg-gradient-to-b from-[#9B69DA] via-[#9B69DA]/20 to-[#9B69DA]',
-    ground: 'bg-gradient-to-b from-[#6E491F] via-[#6E491F]/20 to-[#6E491F]',
-    rock: 'bg-gradient-to-b from-[#8B3E22] via-[#8B3E22]/20 to-[#8B3E22]/',
-    bug: 'bg-gradient-to-b from-[#3B9852] via-[#3B9852]/20 to-[#3B9852]',
-    ghost: 'bg-gradient-to-b from-[#906791] via-[#906791]/20 to-[#906791]', 
-    steel: 'bg-gradient-to-b from-[#43BD94] via-[#43BD94]/20 to-[#43BD94]',
-    fire: 'bg-gradient-to-b from-[#FD4D5A] via-[#FD4D5A]/20 to-[#FD4D5A]',
-    water: 'bg-gradient-to-b from-[#85A8FC] via-[#85A8FC]/20 to-[#85A8FC]',
-    grass: 'bg-gradient-to-b from-[#26CC50] via-[#26CC50]/20 to-[#26CC50]',
-    electric: 'bg-gradient-to-b from-[#FAFB71] via-[#FAFB71]/20  to-[#FAFB71]',
-    psychic: 'bg-gradient-to-b from-[#F71C90] via-[#F71C90]/20 to-[#F71C90]',
-    ice: 'bg-gradient-to-b from-[#D6F1FA] via-[#D6F1FA]/20 to-[#D6F1FA]',
-    dragon: 'bg-gradient-to-b from-[#60CCD9] via-[#60CCD9]/20 to-[#60CCD9]',
-    dark: 'bg-gradient-to-b from-[#5A5979] via-[#5A5979]/20 to-[#5A5979]',
-    fairy: 'bg-gradient-to-b from-[#EB1269] via-[#EB1269]/20 to-[#EB1269]',
-    unknown: 'bg-gradient-to-b from-[#35433E] via-[#35433E]/20 to-[#35433E]',
-    shadow: 'bg-gradient-to-b from-[#301645] via-[#301645]/20 to-[#301645]',
+    normal: 'bg-gradient-to-b from-[#CB98A7]  from-20% via-[#CB98A7]/10  via-40% to-[#CB98A7] to-60%',
+    fighting: 'bg-gradient-to-b from-[#EF6139] from-20% via-[#EF6139]/10  via-40%to-[#EF6139] to-60%',
+    flying: 'bg-gradient-to-b from-[#93B2C7] from-20% via-[#93B2C7]/10 via-40% to-[#93B2C7] to-60%',
+    poison: 'bg-gradient-to-b from-[#9B69DA] from-20% via-[#9B69DA]/10 via-40% to-[#9B69DA] to-60%',
+    ground: 'bg-gradient-to-b from-[#6E491F]  from-20%via-[#6E491F]/10 via-40% to-[#6E491F] to-60%',
+    rock: 'bg-gradient-to-b from-[#8B3E22] from-20% via-[#8B3E22]/10 via-40% to-[#8B3E22] to-60%',
+    bug: 'bg-gradient-to-b from-[#3B9852] from-20% via-[#3B9852]/10 via-40% to-[#3B9852] to-60%',
+    ghost: 'bg-gradient-to-b from-[#906791] from-20% via-[#906791]/10  via-40%to-[#906791] to-60%', 
+    steel: 'bg-gradient-to-b from-[#43BD94] from-20% via-[#43BD94]/10 via-40% to-[#43BD94] to-60%',
+    fire: 'bg-gradient-to-b from-[#FD4D5A] from-20% via-[#FD4D5A]/10 via-40% to-[#FD4D5A] to-60%',
+    water: 'bg-gradient-to-b from-[#85A8FC] from-20% via-[#85A8FC]/10 via-40% to-[#85A8FC] to-60%',
+    grass: 'bg-gradient-to-b from-[#26CC50] from-20% from-20% via-[#26CC50]/10 via-40% to-[#26CC50] to-60%',
+    electric: 'bg-gradient-to-b from-[#FAFB71] from-20% via-[#FAFB71]/10  via-40% to-[#FAFB71] to-60%',
+    psychic: 'bg-gradient-to-b from-[#F71C90] from-20% via-[#F71C90]/10 via-40% to-[#F71C90] to-60%',
+    ice: 'bg-gradient-to-b from-[#D6F1FA] from-20% via-[#D6F1FA]/10 to-[#D6F1FA] to-60%',
+    dragon: 'bg-gradient-to-b from-[#60CCD9] from-20% via-[#60CCD9]/10 via-40% to-[#60CCD9] to-60%',
+    dark: 'bg-gradient-to-b from-[#5A5979] from-20% via-[#5A5979]/10 via-40% to-[#5A5979] to-60%',
+    fairy: 'bg-gradient-to-b from-[#EB1269] from-20% via-[#EB1269]/10  via-40%to-[#EB1269] to-60%',
+    unknown: 'bg-gradient-to-b from-[#35433E] from-20% via-[#35433E]/10 via-40% to-[#35433E] to-60%',
+    shadow: 'bg-gradient-to-b from-[#301645] from-20% via-[#301645]/10  via-40%to-[#301645] to-60%',
 };
 
 
@@ -90,38 +90,39 @@ const textStylePokemon ={
     //
     return (
     <Link to={`/Pokedex/${pokemoninfo?.id}`} >
-        <article className={`border-[5px] border-black text-center rounded-3xl z-1`}>
-            <header className={`flex flex-col items-center justify-center h-[80px] bg-red-700 relative border-b-[5px] border-black rounded-t-2xl z-2`} >
-                <div className={`h-[70px] bg-white rounded-full aspect-square top-10 z-3 
+        <article className={`border-[5px] border-black text-center rounded-3xl z-10`}>
+            <header className={`flex flex-col items-center justify-center h-[80px] bg-red-700 relative border-b-[5px] border-black rounded-t-2xl z-20`} >
+                <div className={`h-[50px] bg-white rounded-full aspect-square top-14 z-30 
                         absolute
-                        border-[8px] border-black
+                        border-[5px] border-black
                         after:block after:content-[""] 
-                        after:h-[38px] after:aspect-square
+                        after:h-[30px] after:aspect-square
                         after:bg-red-500  after:rounded-full
-                        after:border-[6px] after:border-black
-                        after:top-[8px] after:right-[8px] after:absolute`}>
+                        after:border-[3px] after:border-black
+                        after:top-[5px] after:right-[5px] after:absolute`}>
                 </div>
             </header>
 
-            <section className='flex flex-col bg-white/90  rounded-b-[19px] text-center relative z-1 items-center justify-center'>
-                <div className={`h-[70px] bg-white rounded-full aspect-square top-40   
-                        -translate-y-12 absolute
-                        border-[8px] border-black
+            <section className='flex flex-col bg-white/90  rounded-b-[19px] text-center relative z-10 items-center justify-center'>
+                <div className={`h-[50px] bg-white rounded-full aspect-square top-40   
+                        -translate-y-9 absolute
+                        border-b-[4px] border-l-[1px] border-r-[1px] border-black
                         after:block after:content-[""] 
-                        after:h-[38px] after:aspect-square
+                        after:h-[28px] after:aspect-square
                         after:bg-white  after:rounded-full
-                        after:border-[6px] after:border-black
-                        after:top-[8px] after:right-[8px] after:absolute after:z-1`}>
+                        after:border-b-[3px] after:border-r-[1px] after:border-l-[1px] after:border-black
+                        after:top-[12px] after:right-[10px] after:absolute after:z-10`}>
                 </div>
-                <div className={`flex flex-col w-[100%] ${bgStylePokemon[pokemoninfo?.types[0]]} items-center aboslute z-2`}>
+                <div className={`flex flex-col w-[100%] h-[150px] ${bgStylePokemon[pokemoninfo?.types[0]]} items-center aboslute z-20 py-6`}>
                     <div className='h-[75px] aspect-square'>
-                        <img className='h-full w-full object-contain' src={pokemoninfo?.image} alt="" />
+                        <img className='h-full w-full object-contain' src={pokemoninfo?.image ? pokemoninfo?.image: pokemoninfo?.image2} alt="" />
                     </div>
                     <h3 className='text-lg font-bold capitalize'>{pokemoninfo?.name}</h3>
                     <h4 className='text-sm'>{pokemonTypesFormat(pokemoninfo?.types)}</h4>
-                    <span className='font-semibold'>Stats</span>
+                    
                 </div>
-                <div className='border-t-[5px] border-black'>
+                <div className='border-t-[5px] border-black pt-4'>
+                    <span className='font-semibold '>Stats</span>
                     <ul className='grid gap-2 grid-cols-3 text-xs p-2 '>
                         { 
                             pokemoninfo?.stats.map((stat)=>

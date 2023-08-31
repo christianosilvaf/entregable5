@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { getPokemonById } from '../services/pokemons'
 import StatBarList from '../components/pokemonDetail/StatBarList';
 
 const PokemonDetail = () => {
 
     const [pokemonData, setPokemonData] = useState(null);
+	let [visibilityMov,setVisibilityMov]=useState(false);
+	let [visibilityAbi,setVisibilityAbi]=useState(false);
+	const navigate =useNavigate();
 
     const {PokemonId}=useParams()
 
@@ -14,14 +17,48 @@ const PokemonDetail = () => {
         .then((data)=> setPokemonData(data)) 
         .catch((error)=> console.log(error)) 
     },[])
+	
+
+	const handleHideMovements=()=>{
+		return (setVisibilityMov(!visibilityMov));
+	};
+	
+	
+
+	const handleHideAbilities=()=>{
+		return (setVisibilityAbi(!visibilityAbi));
+	};
+
+	const fun =(visibilityMov)=> {
+		if(visibilityMov){
+			return "visible"
+		} return "invisible"
+	};
+
+	const fun2 =(visibilityAbi)=> {
+		if(visibilityAbi){
+			return "visible"
+		} return "invisible"
+	};
+
+	const handleGoPokedexList =()=>{
+		navigate("/Pokedex")
+	};
+
 
 	return (
     <main>
-        <div className='bg-red-500 min-[600px]:h-[550px] h-[900px] max-w-[700px] my-3 mx-auto border-[3px] border-black rounded-lg'>
-			<div className='bg-cyan-500 w-[200px] h-[20px]'>
-	
+        <div className='bg-red-500 min-[600px]:h-[600px] h-[900px] max-w-[700px] mt-3 mb-0 mx-auto border-[3px] border-black rounded-lg p-2'>
+			<div className='flex justify-between p-2'>
+				<div className='bg-cyan-500 aspect-square border-[5px] border-black h-[60px] rounded-full'>
+				</div>
+
+			    <button className='w-[50px] aspect-square bg-yellow-400 animate-pulse text-center rounded-lg text-black border-[5px]
+				                border-sky-950 hover:bg-white hover:text-red-500 text-[20px] font-extrabold'
+				        onClick={()=> handleGoPokedexList()}>X</button>
 			</div>
-			<section className='flex flex-col bg-black-500 items-center justify-center gap-2 p-5 min-[600px]:flex-row'>
+			
+			<section className='flex flex-col bg-black-500 items-center justify-center gap-5 p-5 min-[600px]:flex-row'>
                 
 			
 				<header className='flex-col w-1/3 min-w-[300px] bg-[#44f814] border-[10px]
@@ -39,11 +76,39 @@ const PokemonDetail = () => {
 
         	</section>
 
-			<div className='flex items-center gap-3 justify-center'>
-				<button className='rounded-md bg-yellow-300 p-4 border-[2px]  border-black '> Movements </button>
-				<button className='rounded-md bg-blue-300 p-4 border-[2px]  border-black'> Others  </button>
+			<div className='flex items-center gap-16 justify-center'>
+				<button className='rounded-md bg-yellow-300 p-4 border-[2px]  border-black hover:animate-pulse'
+				        onClick={()=>handleHideMovements()}
+						> Movements </button>
+				<button className='rounded-md bg-blue-300 p-4 border-[2px]  border-black hover:animate-pulse'
+						onClick={()=>handleHideAbilities()}> Abilities </button>
 			</div>
         </div>
+
+		<div className={`bg-red-500 w-1/1  flex flex-col items-center border-[4px] border-black rounded-md mt-0 pb-4 ${fun(visibilityMov)}`}>
+			<div className='bg-[#44f814] w-[80%] h-[80%] border-b-[10px] border-r-[10px] 
+							border-l-[10px] border-sky-950 rounded-3xl
+							flex flex-wrap gap-2 p-3'>
+				{
+					pokemonData?.moves.map((move)=>
+						<span className='text-[10px] bg-white/60 p-1 rounded-3xl' key={move?.name}> {move?.move?.name}</span>
+					)
+				}
+			</div>
+		</div>
+
+		<div className={`bg-red-500 w-1/1  flex flex-col items-center border-[4px] border-black rounded-md mt-0 pb-4 ${fun2(visibilityAbi)}`}>
+			<div className='bg-[#44f814] w-[80%] h-[80%] border-b-[10px] border-r-[10px] 
+							border-l-[10px] border-sky-950 rounded-3xl
+							flex flex-wrap gap-2 p-3'>
+				{
+					pokemonData?.abilities.map((ability)=>
+						<span className='text-[10px] bg-white/60 p-1 rounded-3xl' key={ability?.name}> {ability?.ability?.name}</span>
+					)
+				}
+			</div>
+		</div>
+
     </main>
 )
 };
